@@ -1,0 +1,11 @@
+$yellow: #fecd2f;
+$dark-gray: #333333;
+$light-gray: #aaaaaa;
+
+@mixin title {
+    font-family: 'Gill Sans', 'Century Gothic', sans-serif;
+}
+
+@mixin header {
+    font-family: 'Georgia', 'Palatino', serif;
+}
