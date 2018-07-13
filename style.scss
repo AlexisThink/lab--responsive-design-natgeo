@@ -1,11 +1,52 @@
-$yellow: #fecd2f;
-$dark-gray: #333333;
-$light-gray: #aaaaaa;
+@import "./styles/mixins";
+@import "./styles/vals";
+//GLOBALES
+body{margin:0;}
+p{margin: 0;}
 
-@mixin title {
-    font-family: 'Gill Sans', 'Century Gothic', sans-serif;
+// VERSION MOBILES
+@media screen and (max-width: 768px){
+    .header{
+        @include header-configuration();
+        &__image{
+            width:20%;
+            height: auto;
+            img{width: 155px;}
+        }
+        &__hamburger {@include hamburger-configuration();;}
+    }
+
+    .subtitle{
+        padding: 0 10px;
+        &__title {@include fancy-heder();}
+        &__subtitle {@include fancy-heder();}
+        a {@include link-style();}
+    }
+
+    .article{
+        margin-top: 20px;
+        padding: 0 10px;
+        &__image{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+
+        &__title {@include title();}
+        &__text{
+            @include title();
+            p{@include left-border-txt();}
+        }
+        a {@include link-style();}   
+    }
+
+
+
+
+
+//5566762230
 }
 
-@mixin header {
-    font-family: 'Georgia', 'Palatino', serif;
-}
+// VERSION TALETS
+@media screen and (min-width:768px) and (max-width: 1023px){}
