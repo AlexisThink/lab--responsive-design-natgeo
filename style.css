@@ -12,7 +12,7 @@ p {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid gray; }
+    border-bottom: 1px solid #aaaaaa; }
     .header__image {
       width: 20%;
       height: auto; }
@@ -27,6 +27,7 @@ p {
       font-size: 24px;
       height: 55px; }
   .subtitle {
+    margin-top: 20px;
     padding: 0 10px; }
     .subtitle__title {
       font-family: 'Gill Sans', 'Century Gothic', sans-serif;
@@ -51,8 +52,80 @@ p {
     .article__text {
       font-family: 'Gill Sans', 'Century Gothic', sans-serif; }
       .article__text p {
-        border-left: 1px solid gray;
+        border-left: 1px solid #aaaaaa;
         padding-left: 10px; }
     .article a {
       font-family: 'Georgia', 'Palatino', serif;
-      text-decoration: underline solid #fecd2f; } }
+      text-decoration: underline solid #fecd2f; }
+  .container-button {
+    margin-top: 20px;
+    padding: 0 10px; }
+    .container-button button {
+      width: 100%;
+      height: 35px;
+      text-transform: uppercase;
+      background-color: #fecd2f;
+      border: 2px solid #333333; }
+  .last {
+    margin-top: 20px;
+    padding: 0 10px; }
+    .last__text h3 {
+      font-family: 'Gill Sans', 'Century Gothic', sans-serif;
+      letter-spacing: 3px;
+      text-transform: uppercase; }
+    .last__text a {
+      font-family: 'Georgia', 'Palatino', serif;
+      text-decoration: underline solid #fecd2f; }
+    .last__image {
+      margin-top: 10px;
+      width: 100%; }
+      .last__image img {
+        width: 100%; }
+  .networks {
+    margin-top: 20px;
+    padding: 0 10px;
+    background: #333333;
+    color: white; }
+    .networks__content {
+      padding: 20px 35px; }
+      .networks__content__icons {
+        display: flex;
+        justify-content: space-around;
+        font-size: 28px;
+        padding: 0 80px; }
+        .networks__content__icons .fa-twitter {
+          color: #38a9ee; }
+        .networks__content__icons .fa-facebook-official {
+          color: #425499; }
+        .networks__content__icons .fa-instagram {
+          color: #577da5; }
+      .networks__content__title {
+        font-family: 'Gill Sans', 'Century Gothic', sans-serif; }
+      .networks__content__text {
+        font-size: 13px;
+        display: block;
+        padding-bottom: 25px; }
+      .networks__content__link {
+        font-family: 'Georgia', 'Palatino', serif;
+        text-decoration: underline solid #fecd2f; }
+  .newsletter {
+    padding: 15px 10px;
+    background: #aaaaaa; }
+    .newsletter h5 {
+      margin: 20px;
+      color: white;
+      font-family: 'Gill Sans', 'Century Gothic', sans-serif; }
+    .newsletter__camp {
+      display: flex;
+      flex-direction: row; }
+      .newsletter__camp__input {
+        width: 30%;
+        height: 35px; }
+      .newsletter__camp__button {
+        width: 100%;
+        height: 35px;
+        text-transform: uppercase;
+        background-color: #fecd2f;
+        border: 2px solid #333333;
+        width: 100px;
+        margin: 0 10px; } }

@@ -17,22 +17,20 @@ p{margin: 0;}
     }
 
     .subtitle{
-        padding: 0 10px;
+        @include general-padding();
         &__title {@include fancy-heder();}
         &__subtitle {@include fancy-heder();}
         a {@include link-style();}
     }
 
     .article{
-        margin-top: 20px;
-        padding: 0 10px;
+        @include general-padding();
         &__image{
             width: 100%;
             img{
                 width: 100%;
             }
         }
-
         &__title {@include title();}
         &__text{
             @include title();
@@ -41,11 +39,78 @@ p{margin: 0;}
         a {@include link-style();}   
     }
 
+    .container-button{
+        @include general-padding();
+        button{@include button-style();}
+    }
+
+    .last{
+        @include general-padding();
+        &__text{
+            h3{@include fancy-heder();}
+            a{@include link-style();}
+        }
+        &__image{
+            margin-top: 10px;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    .networks{
+        @include general-padding();
+        background: $dark-gray;
+        
+        color: white;
+        &__content{
+            padding: 20px 35px;
+            &__icons{
+                display: flex;
+                justify-content: space-around;
+                font-size: 28px;
+                padding: 0 80px;
+                .fa-twitter{color: #38a9ee;}
+                .fa-facebook-official{color: #425499;}
+                .fa-instagram{color: #577da5;}
+            }
+            &__title{@include title();}
+            &__text{
+                font-size: 13px;
+                display: block;
+                padding-bottom: 25px;
+            }
+            &__link{@include link-style;}
+        }
+    }
+
+    .newsletter{
+        padding: 15px 10px; 
+        background: $light-gray;
+        h5{margin: 20px;
+            color: white;
+        @include title();}
+        &__camp{
+            display: flex;
+            flex-direction: row;
+            &__input{
+                width: 30%;
+                height: 35px;
+            }
+            &__button{
+                @include button-style();
+                width: 100px;
+                margin: 0 10px;
+            }
+        }
+    }
 
 
 
 
-//5566762230
+
+//TERMINA VERSION MOBIL
 }
 
 // VERSION TALETS
