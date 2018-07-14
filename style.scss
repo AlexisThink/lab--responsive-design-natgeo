@@ -13,6 +13,7 @@ p{margin: 0;}
             img{width: 155px;}
         }
         &__hamburger {@include hamburger-configuration();;}
+        &__nav{display: none}
     }
 
     .subtitle{
@@ -94,6 +95,9 @@ p{margin: 0;}
     }
 // VERSION TALETS
 @media screen and (min-width:768px){
+    .header__nav{
+        display: none;
+    }
     .article{
         display: flex;
         flex-direction: row;
@@ -153,4 +157,70 @@ p{margin: 0;}
         }
     }
 
+}
+
+//VERION DESKTOP
+@media screen and (min-width: 1024px){
+    .header{
+        &__hamburger{
+            display: none;
+        }
+        &__nav{
+            display: flex;
+            flex-direction: row;
+            &__option{
+                list-style: none;
+                margin: 0 40px;
+                @include fancy-heder();
+                color: $light-gray;
+                border-left: 2px solid $yellow;
+
+                padding:0 60px;
+            }
+        }
+    }
+    .subtitle{
+        padding: 0 300px;
+    }
+    .article{
+        padding: 0 300px;
+    }
+    .container-button{
+        button{
+            width: 45%;
+        }
+    }
+    .last{
+        padding: 0 300px;
+    }
+    .networks{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &__content{
+            width: 20%;
+        }
+    }
+    .newsletter{
+        display: flex;
+        flex-direction: row;
+        .subcontainer-newsletter{
+            display: flex;
+            flex-direction: column;
+            width: 70%;            
+        }
+        &__follow{
+            @include left-border-txt();
+            border-left: 1px solid $dark-gray;
+        }
+
+        &__camp{
+            margin-left: 10px;
+            @include left-border-txt();
+            border-left: 1px solid $dark-gray;
+            &__button{
+                height: 41px;;
+            }
+        }
+    }
 }
