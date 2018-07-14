@@ -5,7 +5,6 @@ body{margin:0;}
 p{margin: 0;}
 
 // VERSION MOBILES
-@media screen and (max-width: 768px){
     .header{
         @include header-configuration();
         &__image{
@@ -62,27 +61,16 @@ p{margin: 0;}
     .networks{
         @include general-padding();
         background: $dark-gray;
-        
         color: white;
+
         &__content{
             padding: 20px 35px;
-            &__icons{
-                display: flex;
-                justify-content: space-around;
-                font-size: 28px;
-                padding: 0 80px;
-                .fa-twitter{color: #38a9ee;}
-                .fa-facebook-official{color: #425499;}
-                .fa-instagram{color: #577da5;}
-            }
+            &__icons{@include network-icons();}            
             &__title{@include title();}
-            &__text{
-                font-size: 13px;
-                display: block;
-                padding-bottom: 25px;
-            }
+            &__text{@include network-text();}
             &__link{@include link-style;}
         }
+        
     }
 
     .newsletter{
@@ -105,13 +93,65 @@ p{margin: 0;}
             }
         }
     }
-
-
-
-
-
-//TERMINA VERSION MOBIL
-}
-
 // VERSION TALETS
-@media screen and (min-width:768px) and (max-width: 1023px){}
+@media screen and (min-width:768px){
+    .article{
+        display: flex;
+        flex-direction: row;
+        &__title{
+            padding-left: 10px;
+            margin-top: 0;
+        }
+        &__text{
+            p{
+            border: 0px;}
+        }
+    }
+    .container-button{
+        display: flex;
+        justify-content: center;
+        button{
+            width: 70%;
+        }
+    }
+    .last{
+        &__image{
+            display: flex;
+            justify-content: center;
+            img{
+                width: 70%;
+            }
+        }
+    }
+    .networks{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &__content{
+            width: 40%;
+        }
+    }
+    .newsletter{
+        display: flex;
+        flex-direction: row;
+        .subcontainer-newsletter{
+            display: flex;
+            flex-direction: column;
+            width: 70%;            
+        }
+        &__follow{
+            @include left-border-txt();
+            border-left: 1px solid $dark-gray;
+        }
+
+        &__camp{
+            margin-left: 10px;
+            @include left-border-txt();
+            border-left: 1px solid $dark-gray;
+            &__button{
+                height: 41px;;
+            }
+        }
+    }
+
+}

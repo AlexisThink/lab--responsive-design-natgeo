@@ -48,3 +48,17 @@
     background-color: $yellow;
     border: 2px solid $dark-gray;
 }
+@mixin network-icons {
+    display: flex;
+    justify-content: space-around;
+    font-size: 28px;
+    padding: 0 80px;
+    .fa-twitter{color: #38a9ee;}
+    .fa-facebook-official{color: #425499;}
+    .fa-instagram{color: #577da5;}
+}
+@mixin network-text{
+    font-size: 13px;
+    display: block;
+    padding-bottom: 25px;
+}
